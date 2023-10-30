@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Movimiento : MonoBehaviour
 {
@@ -8,8 +9,10 @@ public class Movimiento : MonoBehaviour
     [SerializeField] private float speed = 12.5f;
     [SerializeField] private float verticalSpeed = 10f;
     [SerializeField] private Vector3 offset = new Vector3(x: 22, y: 0, z: 0);
-
-
+    [SerializeField] private float rotateSpeed = 50f;
+    
+    
+    
 
     private float verticalinput;
 
@@ -18,7 +21,9 @@ public class Movimiento : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         
+
     }
 
     // Update is called once per frame
@@ -30,6 +35,15 @@ public class Movimiento : MonoBehaviour
 
         transform.Translate(Vector3.up * Time.deltaTime * verticalSpeed * verticalinput);
 
+        transform.Rotate(Vector3.left * rotateSpeed * Time.deltaTime * verticalinput);
+
         camera.transform.position = transform.position + offset;
+
+        if (transform.position.z >= 250)
+        {
+            Debug.Log(message:$"Has Ganado");
+        }
+
+
     }
 }

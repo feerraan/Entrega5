@@ -123,6 +123,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &77689353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
+  m_PrefabInstance: {fileID: 1239094319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &77689357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77689353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0db35dee4435ab4883217ad41b93157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Helicespeed: 1000
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,9 +904,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 2100704159}
-  speed: 12.5
+  speed: 20
   verticalSpeed: 10
   offset: {x: 22, y: 0, z: 0}
+  rotateSpeed: 50
 --- !u!1 &899755176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,6 +1237,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
       insertIndex: -1
       addedObject: {fileID: 825415035}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 77689357}
   m_SourcePrefab: {fileID: 100100000, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
 --- !u!1 &1295456286
 GameObject:
@@ -1973,7 +1995,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100704159}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3d86e35ef5720d499377cea9b683c7c, type: 3}
   m_Name: 
