@@ -10,9 +10,10 @@ public class Movimiento : MonoBehaviour
     [SerializeField] private float verticalSpeed = 10f;
     [SerializeField] private Vector3 offset = new Vector3(x: 22, y: 0, z: 0);
     [SerializeField] private float rotateSpeed = 50f;
-    
-    
-    
+
+    private bool firstTime = true;
+
+
 
     private float verticalinput;
 
@@ -21,8 +22,6 @@ public class Movimiento : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        
 
     }
 
@@ -39,9 +38,12 @@ public class Movimiento : MonoBehaviour
 
         camera.transform.position = transform.position + offset;
 
-        if (transform.position.z >= 250)
+        
+
+        if (transform.position.z >= 250 && firstTime)
         {
-            Debug.Log(message:$"Has Ganado");
+            Debug.Log(message: $"Has Ganado");
+                firstTime = false;
         }
 
 
